@@ -87,7 +87,11 @@ extension HomeVC : UITableViewDataSource {
 extension HomeVC : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 100 * addDemo(number: 5)
+    }
+    
+    func addDemo(number:Int) -> CGFloat {
+        return CGFloat(number*number)
     }
     
 }
